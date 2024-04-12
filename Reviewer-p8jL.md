@@ -6,17 +6,19 @@ We apologize for any lack of clarity in our manuscript due to the page limit and
 * Enhancing readability with more detailed explanations throughout the paper
 * Updating Table 1's caption and ensuring informative, self-explanatory captions and descriptions for all tables and figures
 
+
 Regarding your question:
+
 While it is feasible to employ the fitted GDA as an OOD detector, our experiments show that **GDA alone does not deliver satisfactory performance for OOD detection**. Below is a comparison of the AUROC and AUPR scores between a GDA OOD detector and our proposed method on the PACS dataset:
 
-#### AUROC
+**AUROC:**
 
 | Method | env 0  | env 1  | env 2  | env 3  | Avg    |
 |--------|-------------------|-------------------|-------------------|-------------------|-------------------|
 | GDA    | 53.47 ± 2.66      | 68.52 ± 7.77      | 55.47 ± 1.91      | 53.51 ± 3.04      | 57.74 ± 3.62      |
 | Ours   | 75.29 ± 5.21      | 78.23 ± 4.85      | 84.15 ± 3.71      | 79.35 ± 5.11      | **79.25 ± 1.84**      |
 
-#### AUPR
+**AUPR:**
 
 | Method | env 0   | env 1   | env 2   | env 3   | Avg   |
 |--------|-------------------|-------------------|-------------------|-------------------|-------------------|
@@ -25,7 +27,7 @@ While it is feasible to employ the fitted GDA as an OOD detector, our experiment
 
 Our method significantly outperforms the GDA OOD detector.
 
-#### AUROC
+**AUROC:**
 
 | Method               | env 0        | env 1        | env 2        | env 3        | Avg               |
 |----------------------|-------------------|-------------------|-------------------|-------------------|-------------------|
