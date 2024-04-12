@@ -1,1 +1,13 @@
+Thank you for your comments. We apologize for the lack of clarity in presenting this complex research problem. We will refine the formulation and presentation to improve the readability of our manuscript.
 
+**Q1:** We leverage the domain transformation model $G$ and mixup to synthesize diverse augmented OOD instances across domains. As introduced in Section 4.2, the domain transformation model $G$ comprises two primary components: a disentangled encoder network $E$, and a generative (decoder) network $D$. The encoder $E$ extracts semantic ($s$) and domain-related style ($v^e$) factors from a data instance $x^e$. By mixing up semantic factors from different domains and pairing them with style vectors, we use the decoder D to reconstruct diverse synthetic OOD raw images across domains. These images define a regularization term that helps learn a semantic feature extractor more effective for semantic OOD detection in unseen domains. In contrast, CutMix directly edits pixels in raw images to create augmented images, but is not suitable for augmentation in the latent conceptual space across training domains.
+
+**Q2:** The simple combination is ineffective. The crux of the challenge in combining these two methodologies is that the feature extractors developed for DG (focusing on G-invariance (GI) for reliable class probability estimations across domains) do not align well with the requirements for effective semantic OOD detection in unseen domains. In particular, for OOD detection, the model needs to recognize when inputs significantly differ from any of the training classes in an unseen domain, which may require a different set of features or a different feature representation than what is optimal for DG. To address this, we propose a new domain invariance principle called semantic G-invariance (SGI). We show that the feature extractor learned based on SGI is more effective than that learned based on GI, both theoretically and empirically (e.g., Propositions 2 and 3 in Section 5 and Table 1 in Section 6).
+
+**Q3:** Our test sets contain both ID instances with covariate shifts and OOD examples with semantic and covariate shifts. Table 2 (Section 6) shows our approach's robustness to covariate shifts. Additional experiments [link] demonstrate that our approach outperforms MBDG and MEDIC in detecting semantic-shift-only OODs, with improvements of up to 10% in AUROC and 29% in AUPR.
+
+| Method | AUROC          | AUPR           |
+|--------|----------------|----------------|
+| MBDG   | 67.33 +/- 2.78 | 28.17 +/- 3.56 |
+| MEDIC  | 69.61 +/- 4.30 | 28.98 +/- 5.25 |
+| Ours   | **73.92 +/- 2.37** | **36.29 +/- 4.72** |
