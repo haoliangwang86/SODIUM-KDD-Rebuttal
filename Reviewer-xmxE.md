@@ -14,7 +14,7 @@ Q6: While generating synthetic domains is possible, real-world multi-domain data
 
 Q7: Detailed experimental settings can be found in Appendix A.5.1. Our experiments are conducted under an intra-dataset setting that randomly holds out some classes as OOD. It is a widely recognized strategy in the literature.
 
-Q8: This combination tackles realistic problems and introduces new fundamental challenges. We believe our main contributions (theoretical justification about the limitations of existing DG benchmarks, a new domain invariance principle "SGI: semantic G-invariance,", SGI-based framework design, _etc_.), as detailed in Section 1, are significant and novel.
+Q8: This combination tackles realistic problems and introduces new fundamental challenges. We believe our main contributions: theoretical justification about the limitations of existing DG benchmarks, a new domain invariance principle "SGI: semantic G-invariance,", SGI-based framework design, _etc_., as detailed in Section 1, are significant and novel.
 
 Q9: VOS generates OODs within the feature space of a single domain and, therefore, is incapable of generating diverse OODs across different domains.
 
